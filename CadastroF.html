@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CadastroF</title>
+    <style>
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      body {
+        background: #dadada;
+        overflow: hidden;
+      }
+
+      #cabecalho {
+        width: 100%;
+        height: 501.67px;
+        background: url(iimagens/topoo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 6px;
+      }
+
+      #caixaC {
+        position: absolute;
+        width: 1012px;
+        height: 463px;
+        left: 177px;
+        top: 171px;
+        background: #ffffff;
+        padding: 50px;
+      }
+
+      #Subti {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 24px;
+        color: #000000;
+        margin-top: 0;
+        margin-left: 10px;
+        text-align: start;
+      }
+
+      #letra {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 24px;
+        color: #000000;
+      }
+
+      #bar {
+        box-sizing: border-box;
+        width: 100%;
+        height: 42px;
+        background: #ffffff;
+        border: 1px solid #000000;
+      }
+      #Cadastrar {
+        width: 225px;
+        height: 36px;
+        margin-top: 25px;
+        background: #6a1c8e;
+        border-radius: 14px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 29px;
+        color: #ffffff;
+        border: 2px solid rgba(0, 0, 0, 0.253);
+        float: right;
+      }
+      #Cancelar {
+        margin-top: 25px;
+        width: 225px;
+        height: 36px;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 2px solid #6a1c8e;
+        border-radius: 14px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 650;
+        font-size: 20px;
+        line-height: 29px;
+        color: #6a1c8e;
+        float: left;
+      }
+      input {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      #Titulo {
+        position: absolute;
+        width: 574px;
+        height: 58px;
+        left: 180px;
+        top: 70px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        color: #6a1c8e;
+      }
+      #navbarr {
+        position: absolute;
+        top: 70px;
+        border: #ffffff solid 1px;
+        width: 100%;
+      }
+      #SelecionadoH {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #6a1c8e;
+      }
+      #NormalH {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #ffffff;
+        margin-left: 60px;
+      }
+      #Sair {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #6a1c8e;
+        margin-left: 60px;
+        float: right;
+        margin-right: 50px;
+        border: #6a1c8e solid 2px;
+        background: #ffffff11;
+        border-radius: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    </style>
+  </head>
+  <body style="margin: 0">
+    <header id="cabecalho">
+      <div style="float: left; width: 30%">
+        <img src="imagens/logo.png" width="65px" />
+      </div>
+      <div style="float: right; margin-right: 10px; margin-top: 20px">
+        <div style="float: left">
+          <div style="float: left" id="SelecionadoH">Funcionario</div>
+          <div style="float: right" id="NormalH">Cliente</div>
+        </div>
+        <div style="float: right">
+          <div style="float: left;" id="NormalH"> Fornecedor </div>
+          <div id="Sair">Sair</div>
+        </div>
+      </div>
+    </header>
+    <hr id="navbarr" />
+    <h2 id="Titulo">
+      Cadastro <algo style="color: #ffffff">de Funcionário</algo>
+    </h2>
+    <div id="caixaC">
+      <h3 id="Subti">Informações Pessoais</h3>
+      <hr style="margin-bottom: 20px" />
+      <div style="width: 45%; float: left">
+        <label for="nome" id="letra">Primeiro Nome:</label><br />
+        <input type="text" name="nome" required id="bar" />
+      </div>
+      <div style="width: 45%; float: right">
+        <label for="sobrenome" id="letra">Sobrenome:</label><br />
+        <input type="text" name="sobrenome" id="bar" />
+      </div>
+      <div style="width: 45%; float: left">
+        <label for="dataNasc" id="letra">Data de Nascimento:</label><br />
+        <input type="date" name="dataNasc" required id="bar" />
+      </div>
+      <div style="width: 45%; float: right">
+        <label for="email" id="letra">E-mail:</label><br />
+        <input type="email" name="email" required id="bar" />
+      </div>
+      <div style="position: absolute; width: 91%; top: 280px">
+        <h3 id="Subti">Informações Profissionais</h3>
+        <hr style="margin-bottom: 20px" />
+      </div>
+      <div style="width: 70%; float: left; margin-top: 90px">
+        <div style="width: 40%; float: left">
+          <label for="cargo" id="letra">Cargo:</label><br />
+          <input type="text" name="cargo" required id="bar" />
+        </div>
+        <div style="width: 40%; float: right">
+          <label for="salario" id="letra">Salário:</label><br />
+          <input type="text" name="salario" required id="bar" />
+        </div>
+      </div>
+      <div style="width: 20%; float: right; margin-top: 90px">
+        <label for="adimissao" id="letra">Admissão:</label><br />
+        <input
+          type="date"
+          name="adimissao"
+          required
+          id="bar"
+          style="padding: 1rem"
+        />
+      </div>
+      <div style="width: 45%; float: left">
+        <label for="senha" id="letra">Senha Temporária:</label><br />
+        <input type="text" name="senha" required id="bar" style="width: 70%" />
+      </div>
+      <div style="width: 45%; float: right">
+        <label for="idF" id="letra">ID do Funcionario:</label><br />
+        <input type="number" name="idF" required id="bar" style="width: 20%" />
+      </div>
+      <button id="Cadastrar">Cadastrar</button>
+      <button id="Cancelar">Cancelar</button>
+    </div>
+  </body>
+</html>
