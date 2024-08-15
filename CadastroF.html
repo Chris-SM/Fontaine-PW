@@ -10,6 +10,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CadastroF</title>
+    <link rel="stylesheet" href="css/topstyle.css">
     <style>
       input[type="number"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -18,15 +19,6 @@
       body {
         background: #dadada;
         overflow: hidden;
-      }
-
-      #cabecalho {
-        width: 100%;
-        height: 501.67px;
-        background: url(iimagens/topoo.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 6px;
       }
 
       #caixaC {
@@ -51,7 +43,7 @@
         text-align: start;
       }
 
-      #letra {
+      #letraa {
         font-family: "Inter";
         font-style: normal;
         font-weight: 700;
@@ -115,64 +107,46 @@
         line-height: 58px;
         color: #6a1c8e;
       }
-      #navbarr {
-        position: absolute;
-        top: 70px;
-        border: #ffffff solid 1px;
-        width: 100%;
-      }
-      #SelecionadoH {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 39px;
-        text-align: center;
-        color: #6a1c8e;
-      }
-      #NormalH {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 39px;
-        text-align: center;
-        color: #ffffff;
-        margin-left: 60px;
-      }
-      #Sair {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 39px;
-        text-align: center;
-        color: #6a1c8e;
-        margin-left: 60px;
-        float: right;
-        margin-right: 50px;
-        border: #6a1c8e solid 2px;
-        background: #ffffff11;
-        border-radius: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
     </style>
   </head>
   <body style="margin: 0">
     <header id="cabecalho">
       <div style="float: left; width: 30%">
-        <img src="imagens/logo.png" width="65px" />
+        <a href="Menu.html"> <img src="css/imagens/logo.png" width="65px" /></a>
       </div>
       <div style="float: right; margin-right: 10px; margin-top: 20px">
-        <div style="float: left">
-          <div style="float: left" id="SelecionadoH">Funcionario</div>
-          <div style="float: right" id="NormalH">Cliente</div>
-        </div>
-        <div style="float: right">
-          <div style="float: left;" id="NormalH"> Fornecedor </div>
-          <div id="Sair">Sair</div>
-        </div>
+          <div style="float: left">
+              <div class="Menu" style="float: left">
+                  <div style="padding-top: 2px; color: #6a1c8e;" id="NormalH" class="IconM">Funcionario</div>
+                  <div class="itemSuspenso">
+                      <a href="CadastroF.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
+                      <hr>
+                      <a href="#" id="letra" style="margin-bottom: 5px; font-size: 18px;">Ver / Editar</a>
+                      <a href="#" style="visibility: hidden;"></a>
+                  </div>
+              </div>
+              <div class="Menu" style="float: right;">
+                  <div style="padding-top: 2px;" id="NormalH" class="IconM">Cliente</div>
+                  <div class="itemSuspenso">
+                      <a href="CadastroF.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
+                      <hr>
+                      <a href="#" id="letra" style="margin-bottom: 5px; font-size: 18px;">Ver / Editar</a>
+                      <a href="#" style="visibility: hidden;"></a>
+                  </div>
+              </div>
+          </div>
+          <div style="float: right">
+              <div class="Menu" style="float: left;">
+              <div style="padding-top: 2px;" id="NormalH" class="IconM"> Fornecedor </div>
+              <div class="itemSuspenso">
+                  <a href="CadastroF.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
+                  <hr>
+                  <a href="#" id="letra" style="margin-bottom: 5px; font-size: 18px;">Ver / Editar</a>
+                  <a href="#" style="visibility: hidden;"></a>
+              </div>
+          </div>
+              <a href="index.html"><div id="Sair">Sair</div></a>
+          </div>
       </div>
     </header>
     <hr id="navbarr" />
@@ -183,19 +157,19 @@
       <h3 id="Subti">Informações Pessoais</h3>
       <hr style="margin-bottom: 20px" />
       <div style="width: 45%; float: left">
-        <label for="nome" id="letra">Primeiro Nome:</label><br />
+        <label for="nome" id="letraa">Primeiro Nome:</label><br />
         <input type="text" name="nome" required id="bar" />
       </div>
       <div style="width: 45%; float: right">
-        <label for="sobrenome" id="letra">Sobrenome:</label><br />
+        <label for="sobrenome" id="letraa">Sobrenome:</label><br />
         <input type="text" name="sobrenome" id="bar" />
       </div>
       <div style="width: 45%; float: left">
-        <label for="dataNasc" id="letra">Data de Nascimento:</label><br />
+        <label for="dataNasc" id="letraa">Data de Nascimento:</label><br />
         <input type="date" name="dataNasc" required id="bar" />
       </div>
       <div style="width: 45%; float: right">
-        <label for="email" id="letra">E-mail:</label><br />
+        <label for="email" id="letraa">E-mail:</label><br />
         <input type="email" name="email" required id="bar" />
       </div>
       <div style="position: absolute; width: 91%; top: 280px">
@@ -204,16 +178,16 @@
       </div>
       <div style="width: 70%; float: left; margin-top: 90px">
         <div style="width: 40%; float: left">
-          <label for="cargo" id="letra">Cargo:</label><br />
+          <label for="cargo" id="letraa">Cargo:</label><br />
           <input type="text" name="cargo" required id="bar" />
         </div>
         <div style="width: 40%; float: right">
-          <label for="salario" id="letra">Salário:</label><br />
+          <label for="salario" id="letraa">Salário:</label><br />
           <input type="text" name="salario" required id="bar" />
         </div>
       </div>
       <div style="width: 20%; float: right; margin-top: 90px">
-        <label for="adimissao" id="letra">Admissão:</label><br />
+        <label for="adimissao" id="letraa">Admissão:</label><br />
         <input
           type="date"
           name="adimissao"
@@ -223,11 +197,11 @@
         />
       </div>
       <div style="width: 45%; float: left">
-        <label for="senha" id="letra">Senha Temporária:</label><br />
+        <label for="senha" id="letraa">Senha Temporária:</label><br />
         <input type="text" name="senha" required id="bar" style="width: 70%" />
       </div>
       <div style="width: 45%; float: right">
-        <label for="idF" id="letra">ID do Funcionario:</label><br />
+        <label for="idF" id="letraa">ID do Funcionario:</label><br />
         <input type="number" name="idF" required id="bar" style="width: 20%" />
       </div>
       <button id="Cadastrar">Cadastrar</button>
