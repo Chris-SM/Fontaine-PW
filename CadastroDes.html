@@ -9,9 +9,10 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CadastroC</title>
+    <title>CadastroDes</title>
     <link rel="stylesheet" href="css/topstyle.css">
     <style>
+      
     </style>
   </head>
   <body style="margin: 0">
@@ -22,7 +23,7 @@
       <div style="float: right; margin-right: 10px; margin-top: 20px">
           <div style="float: left">
               <div class="Menu" style="float: left">
-                  <div style="padding-top: 2px;" id="NormalH" class="IconM">Funcionario</div>
+                  <div style="padding-top: 2px; color: #6a1c8e;" id="NormalH" class="IconM">Funcionario</div>
                   <div class="itemSuspenso">
                       <a href="CadastroF.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
                       <hr>
@@ -31,7 +32,7 @@
                   </div>
               </div>
               <div class="Menu" style="float: right;">
-                  <div style="padding-top: 2px; color: #6a1c8e;" id="NormalH" class="IconM">Cliente</div>
+                  <div style="padding-top: 2px;" id="NormalH" class="IconM">Cliente</div>
                   <div class="itemSuspenso">
                       <a href="CadastroC.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
                       <hr>
@@ -56,49 +57,47 @@
     </header>
     <hr id="navbarr" />
     <h2 id="Titulo">
-      Cadastro <algo style="color: #ffffff">de Cliente</algo>
+      Cadastro <algo style="color: #ffffff">de Despesas</algo>
     </h2>
-    <form action="db/InsertCCBD.php" method="post">
-    <div id="caixaC">
-      <h3 id="Subti">Informações Pessoais</h3>
-      <hr style="margin-bottom: 20px" />
-      <div style="width: 45%; float: left">
-        <label for="nome" id="letraa">Primeiro Nome:</label><br />
-        <input type="text" name="nome" required class="bar" maxlength="50"/> <br><br>
+    <form action="db/InsertDesBD.php" method="post">
+      <div id="caixaC">
+        <h3 id="Subti">Informações da Despesas</h3>
+        <hr style="margin-bottom: 20px" />
+        <div style="width: 45%; float: left">
+          <label for="idR" id="letraa">ID:</label><br />
+            <input type="number" name="idR" required class="bar" style="width: 20%"/>
+        </div>
+        <div style="width: 45%; float: right">
+          <label for="Desc" id="letraa">Descrição:</label><br />
+          <input type="text" id="Desc"  name="Desc" class="bar" />
+        </div>
+        <div style="width: 45%; float: left">
+          <label for="Val" id="letraa">Valor da Despesas:</label><br />
+          <input type="number" id="Val"  name="Valor" class="bar" />
+        </div>
+        <div style="width: 45%; float: right">
+          <label for="dataLan" id="letraa">Data de Lançamento:</label><br />
+          <input type="date" id="dataLan"  name="dataLan" required class="bar" />
+        </div>
+        <div style="position: absolute; width: 91%; top: 280px">
+          <h3 id="Subti">Informações Adicionais</h3>
+          <hr style="margin-bottom: 20px" />
+        </div>
+        <div style="width: 80%; float: right; margin-top: 90px; margin-bottom: 50px;">  
+          <div style="width: 50%; float: left">
+            <label for="idCat" id="letraa">ID da Categoria:</label><br />
+            <input type="number" id="idCat" name="idCat" required class="bar" style="width: 20%" />
+            <button id="more" onclick="window.location.replace('CadastroCat.html');"> + </button>
+          </div>
+          <div style="width: 50%; float: right">
+            <label for="idF" id="letraa">ID do Funcionario:</label><br />
+            <input type="number" id="idF" name="idF" required class="bar" style="width: 20%"/>
+            <button id="more" onclick="window.location.replace('CadastroF.html');"> + </button>
+          </div>
+        </div>
+          <button id="Cadastrar" type="submit">Cadastrar</button>
+          <button id="Cancelar" onclick="window.location.replace('Menu.html');">Cancelar</button>
       </div>
-      <div style="width: 45%; float: right">
-        <label for="sobrenome" id="letraa">Sobrenome:</label><br />
-        <input type="text" name="sobrenome" class="bar" maxlength="50"/> <br><br>
-      </div>
-      <div style="width: 25%; float: left">
-        <label for="dataNasc" id="letraa">Data de Nascimento:</label><br />
-        <input type="date" name="dataNasc" required class="bar"/> <br><br>
-      </div>
-      <div style="width: 65%; float: right">
-        <label for="email" id="letraa">E-mail:</label><br />
-        <input type="email" name="email" required class="bar"  maxlength="50"/> <br><br>
-      </div>
-      <div style="width: 26%; float: left">
-        <label for="telefone" id="letraa">Telefone:</label><br />
-        <input type="text" name="telefone" required class="bar" maxlength="11" /> <br><br>
-      </div>
-      <div style="float: right; width: 70%;">
-      <div style="width: 70%; float: left">
-        <label for="nm_enderoco" id="letraa">Endereço:</label><br />
-        <input type="text" name="nm_enderoco" required class="bar"  maxlength="50"/> <br><br>
-      </div>
-      <div style="width: 25%; float: right">
-        <label for="Numero" id="letraa">Número:</label><br />
-        <input type="number" name="Numero" required class="bar" /> <br><br>
-      </div>
-      </div>
-      <div style="width: 20%;">
-        <label for="IDC" id="letraa">ID de registro:</label><br />
-        <input type="number" name="IDC" required class="bar" /> <br><br>
-      </div>
-      <button id="Cadastrar">Cadastrar</button>
-      <button id="Cancelar" onclick="window.location.replace('Menu.html');">Cancelar</button>
     </form>
-    </div>
   </body>
 </html>

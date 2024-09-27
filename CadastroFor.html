@@ -9,104 +9,9 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CadastroF</title>
+    <title>CadastroFor</title>
     <link rel="stylesheet" href="css/topstyle.css">
     <style>
-      input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-      }
-
-      body {
-        background: #dadada;
-        overflow: hidden;
-      }
-
-      #caixaC {
-        position: absolute;
-        width: 1012px;
-        height: 463px;
-        left: 177px;
-        top: 171px;
-        background: #ffffff;
-        padding: 50px;
-      }
-
-      #Subti {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 24px;
-        color: #000000;
-        margin-top: 0;
-        margin-left: 10px;
-        text-align: start;
-      }
-
-      #letraa {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 24px;
-        color: #000000;
-      }
-
-      #bar {
-        box-sizing: border-box;
-        width: 100%;
-        height: 42px;
-        background: #ffffff;
-        border: 1px solid #000000;
-      }
-      #Cadastrar {
-        width: 225px;
-        height: 36px;
-        margin-top: 25px;
-        background: #6a1c8e;
-        border-radius: 14px;
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 29px;
-        color: #ffffff;
-        border: 2px solid rgba(0, 0, 0, 0.253);
-        float: right;
-      }
-      #Cancelar {
-        margin-top: 25px;
-        width: 225px;
-        height: 36px;
-        box-sizing: border-box;
-        background: #ffffff;
-        border: 2px solid #6a1c8e;
-        border-radius: 14px;
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 650;
-        font-size: 20px;
-        line-height: 29px;
-        color: #6a1c8e;
-        float: left;
-      }
-      input {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      #Titulo {
-        position: absolute;
-        width: 574px;
-        height: 58px;
-        left: 180px;
-        top: 70px;
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 58px;
-        color: #6a1c8e;
-      }
     </style>
   </head>
   <body style="margin: 0">
@@ -153,42 +58,44 @@
     <h2 id="Titulo">
       Cadastro <algo style="color: #ffffff">de Fornecedor</algo>
     </h2>
+    <form action="db/InsertFoCBD.php" method="post">
     <div id="caixaC">
       <h3 id="Subti">Informações Pessoais</h3>
       <hr style="margin-bottom: 20px" />
       <div style="width: 60%; float: left">
         <label for="nome" id="letraa">Nome da Companhia</label><br />
-        <input type="text" name="nome" required id="bar" /> <br><br>
+        <input type="text" name="nome" required class="bar" /> <br><br>
       </div>
       <div style="width: 35%; float: right">
         <label for="sobrenome" id="letraa">CNPJ:</label><br />
-        <input type="text" name="sobrenome" id="bar" />  <br><br>
+        <input type="text" name="sobrenome" class="bar" />  <br><br>
       </div>
       <div style="width: 30%; float: left">
         <label for="dataNasc" id="letraa">Telefone: </label><br />
-        <input type="number" name="Tele" required id="bar" /> <br><br>
+        <input type="number" name="Tele" required class="bar" /> <br><br>
       </div>
       <div style="width: 65%; float: right;">
         <label for="email" id="letraa">E-mail:</label><br />
-        <input type="email" name="email" required id="bar" /> <br><br>
+        <input type="email" name="email" required class="bar" /> <br><br>
       </div>
       <div style="width: 65%; float: left ;">
         <label for="email" id="letraa">Endereço:</label><br />
-        <input type="email" name="email" required id="bar" /> <br><br>
+        <input type="email" name="email" required class="bar" /> <br><br>
       </div>
       <div style="width: 10%; float: right; margin-right: 20%;">
         <label for="dataNasc" id="letraa">Numero: </label><br />
-        <input type="number" name="Tele" required id="bar" /> <br><br>
+        <input type="number" name="Tele" required class="bar" /> <br><br>
       </div>
       <div style="width: 15%; float: left ;">
         <label for="email" id="letraa">ID de registro:</label><br />
-        <input type="email" name="email" required id="bar" /><br>
+        <input type="email" name="email" required class="bar" /><br>
       </div>
       <div style="width: 90%; float: right;">
       </div> <br>
 
-      <button id="Cancelar">Cancelar</button>
+      <button id="Cancelar" onclick="window.location.replace('Menu.html');">Cancelar</button>
       <button id="Cadastrar">Cadastrar</button>
     </div>
+    </form>
   </body>
 </html>

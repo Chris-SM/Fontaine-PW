@@ -12,101 +12,6 @@
     <title>CadastroF</title>
     <link rel="stylesheet" href="css/topstyle.css">
     <style>
-      input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-      }
-
-      body {
-        background: #dadada;
-        overflow: hidden;
-      }
-
-      #caixaC {
-        position: absolute;
-        width: 1012px;
-        height: 463px;
-        left: 177px;
-        top: 171px;
-        background: #ffffff;
-        padding: 50px;
-      }
-
-      #Subti {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 24px;
-        color: #000000;
-        margin-top: 0;
-        margin-left: 10px;
-        text-align: start;
-      }
-
-      #letraa {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 24px;
-        color: #000000;
-      }
-
-      #bar {
-        box-sizing: border-box;
-        width: 100%;
-        height: 42px;
-        background: #ffffff;
-        border: 1px solid #000000;
-      }
-      #Cadastrar {
-        width: 225px;
-        height: 36px;
-        margin-top: 25px;
-        background: #6a1c8e;
-        border-radius: 14px;
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 29px;
-        color: #ffffff;
-        border: 2px solid rgba(0, 0, 0, 0.253);
-        float: right;
-      }
-      #Cancelar {
-        margin-top: 25px;
-        width: 225px;
-        height: 36px;
-        box-sizing: border-box;
-        background: #ffffff;
-        border: 2px solid #6a1c8e;
-        border-radius: 14px;
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 650;
-        font-size: 20px;
-        line-height: 29px;
-        color: #6a1c8e;
-        float: left;
-      }
-      input {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      #Titulo {
-        position: absolute;
-        width: 574px;
-        height: 58px;
-        left: 180px;
-        top: 70px;
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 58px;
-        color: #6a1c8e;
-      }
     </style>
   </head>
   <body style="margin: 0">
@@ -128,7 +33,7 @@
               <div class="Menu" style="float: right;">
                   <div style="padding-top: 2px;" id="NormalH" class="IconM">Cliente</div>
                   <div class="itemSuspenso">
-                      <a href="CadastroF.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
+                      <a href="CadastroC.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
                       <hr>
                       <a href="#" id="letra" style="margin-bottom: 5px; font-size: 18px;">Ver / Editar</a>
                       <a href="#" style="visibility: hidden;"></a>
@@ -139,7 +44,7 @@
               <div class="Menu" style="float: left;">
               <div style="padding-top: 2px;" id="NormalH" class="IconM"> Fornecedor </div>
               <div class="itemSuspenso">
-                  <a href="CadastroF.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
+                  <a href="CadastroFor.html" id="letra" style="font-size: 18px; padding-top: 16px;">Cadastrar</a>
                   <hr>
                   <a href="#" id="letra" style="margin-bottom: 5px; font-size: 18px;">Ver / Editar</a>
                   <a href="#" style="visibility: hidden;"></a>
@@ -153,24 +58,25 @@
     <h2 id="Titulo">
       Cadastro <algo style="color: #ffffff">de Funcionário</algo>
     </h2>
+    <form action="db/InsertFCBD.php" method="post">
     <div id="caixaC">
       <h3 id="Subti">Informações Pessoais</h3>
       <hr style="margin-bottom: 20px" />
       <div style="width: 45%; float: left">
         <label for="nome" id="letraa">Primeiro Nome:</label><br />
-        <input type="text" name="nome" required id="bar" />
+        <input type="text" name="nome" required class="bar" />
       </div>
       <div style="width: 45%; float: right">
         <label for="sobrenome" id="letraa">Sobrenome:</label><br />
-        <input type="text" name="sobrenome" id="bar" />
+        <input type="text" name="sobrenome" class="bar" />
       </div>
       <div style="width: 45%; float: left">
         <label for="dataNasc" id="letraa">Data de Nascimento:</label><br />
-        <input type="date" name="dataNasc" required id="bar" />
+        <input type="date" name="dataNasc" required class="bar" />
       </div>
       <div style="width: 45%; float: right">
         <label for="email" id="letraa">E-mail:</label><br />
-        <input type="email" name="email" required id="bar" />
+        <input type="email" name="email" required class="bar" />
       </div>
       <div style="position: absolute; width: 91%; top: 280px">
         <h3 id="Subti">Informações Profissionais</h3>
@@ -179,11 +85,11 @@
       <div style="width: 70%; float: left; margin-top: 90px">
         <div style="width: 40%; float: left">
           <label for="cargo" id="letraa">Cargo:</label><br />
-          <input type="text" name="cargo" required id="bar" />
+          <input type="text" name="cargo" required class="bar" />
         </div>
         <div style="width: 40%; float: right">
           <label for="salario" id="letraa">Salário:</label><br />
-          <input type="text" name="salario" required id="bar" />
+          <input type="text" name="salario" required class="bar" />
         </div>
       </div>
       <div style="width: 20%; float: right; margin-top: 90px">
@@ -192,20 +98,21 @@
           type="date"
           name="adimissao"
           required
-          id="bar"
+          class="bar"
           style="padding: 1rem"
         />
       </div>
       <div style="width: 45%; float: left">
         <label for="senha" id="letraa">Senha Temporária:</label><br />
-        <input type="text" name="senha" required id="bar" style="width: 70%" />
+        <input type="text" name="senha" required class="bar" style="width: 70%" />
       </div>
       <div style="width: 45%; float: right">
         <label for="idF" id="letraa">ID do Funcionario:</label><br />
-        <input type="number" name="idF" required id="bar" style="width: 20%" />
+        <input type="number" name="idF" required class="bar" style="width: 20%" />
       </div>
       <button id="Cadastrar">Cadastrar</button>
-      <button id="Cancelar">Cancelar</button>
+      <button id="Cancelar" onclick="window.location.replace('Menu.html');">Cancelar</button>
     </div>
+    </form>
   </body>
 </html>
